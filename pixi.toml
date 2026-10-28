@@ -12,7 +12,6 @@ exclude-newer = "0d"
 uv_build = "0d"
 afterpython = "0d"
 pfund-blocks = "0d"
-pfund-kit = "0d"
 
 [tasks]
 
@@ -28,7 +27,7 @@ depends-on = [
 [pypi-dependencies]
 pfund-blocks = ">=0.0.1"
 httpx2 = { version = ">=2.16.0", extras = ["http2"] }
-websockets = ">=17.3.0"
+websockets = ">=16.1.1"
 
 [environments]
 default = ["py313", "dev", "test"]
@@ -38,14 +37,14 @@ py315 = ["py315", "test"]
 
 [feature.dev.pypi-dependencies]
 pfund-hyperliquid = { path = ".", editable = true }
-pfund-blocks = { path = "../pfund-blocks", editable = true }  # TEMP
+pfund-blocks = { path = "../../../pfund-blocks", editable = true }  # TEMP
 afterpython = ">=0.4.0"
 
 [feature.test.pypi-dependencies]
 pfund-hyperliquid = { path = ".", editable = true }
-pfund-blocks = { path = "../pfund-blocks", editable = true }  # TEMP
+pfund-blocks = { path = "../../../pfund-blocks", editable = true }  # TEMP
 pytest = ">=9.1.1"
-pytest-mock = ">=3.16.0"
+pytest-mock = ">=3.17.0"
 pytest-xdist = ">=3.8.0"
 pytest-asyncio = ">=1.4.0"
 # pytest-cov = ">=7.1.0"
